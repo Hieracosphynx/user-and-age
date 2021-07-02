@@ -49,7 +49,7 @@ const UserForm = (props) => {
   };
 
   const errorModalHandler = () => {
-    setError();
+    setError(null);
   };
 
   return (

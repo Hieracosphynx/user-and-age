@@ -3,13 +3,7 @@ import './App.css';
 import User from './components/Users/Users';
 import NewUser from './components/NewUser/NewUser';
 const App = () => {
-  const [users, setUsers] = useState([
-    {
-      id: '1',
-      name: 'sdsd',
-      age: 'sdsd',
-    },
-  ]);
+  const [users, setUsers] = useState([]);
 
   const exportUserHandler = (userProps) => {
     setUsers((prevState) => {

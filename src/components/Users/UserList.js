@@ -1,8 +1,8 @@
 const UserList = (props) => {
   return (
-    <div>
+    <li>
       {props.name} ({props.age} years old)
-    </div>
+    </li>
   );
 };
 

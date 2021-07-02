@@ -10,10 +10,17 @@ const App = () => {
       age: 'sdsd',
     },
   ]);
+
+  const exportUserHandler = (userProps) => {
+    setUsers((prevState) => {
+      return [...prevState, userProps];
+    });
+  };
+
   return (
     <div className='App'>
       <div className='App-header'>
-        <NewUser />
+        <NewUser exportUserInfo={exportUserHandler} />
         <User values={users} />
       </div>
     </div>

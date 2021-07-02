@@ -18,11 +18,9 @@ const App = () => {
   };
 
   return (
-    <div className='App'>
-      <div className='App-header'>
-        <NewUser exportUserInfo={exportUserHandler} />
-        <User values={users} />
-      </div>
+    <div>
+      <NewUser exportUserInfo={exportUserHandler} />
+      <User values={users} />
     </div>
   );
 };

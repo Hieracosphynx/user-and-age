@@ -7,7 +7,7 @@ const User = (props) => {
 
   const userList = props.values.map((prop) => {
     return (
-      <Card key={prop.id} className='user-controls__list'>
+      <Card key={prop.id}>
         <UserList key={prop.id} name={prop.name} age={prop.age} />
       </Card>
     );

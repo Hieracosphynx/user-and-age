@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import './App.css';
 import User from './components/Users/Users';
 import NewUser from './components/NewUser/NewUser';
@@ -12,10 +12,10 @@ const App = () => {
   };
 
   return (
-    <div>
+    <Fragment>
       <NewUser exportUserInfo={exportUserHandler} />
       <User values={users} />
-    </div>
+    </Fragment>
   );
 };
 

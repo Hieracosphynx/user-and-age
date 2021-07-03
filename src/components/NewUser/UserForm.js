@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../UI/Button';
 import Card from '../UI/Card';
+import Wrapper from '../Helpers/Wrapper';
 import ErrorModal from '../UI/ErrorModal';
 
 import classes from './UserForm.module.css';
@@ -53,7 +54,7 @@ const UserForm = (props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           errorModal={errorModalHandler}
@@ -70,7 +71,7 @@ const UserForm = (props) => {
           <Button type='submit'>Submit</Button>
         </form>
       </Card>
-    </div>
+    </Wrapper>
   );
 };
 

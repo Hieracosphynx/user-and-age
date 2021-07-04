@@ -3,10 +3,20 @@ import UserList from './UserList';
 import classes from './Users.module.css';
 
 const User = (props) => {
-  console.log(props.values);
+  const removeUserControlHandler = (id) => {
+    props.onDelete(id);
+  };
 
   const userList = props.values.map((prop) => {
-    return <UserList key={prop.id} name={prop.name} age={prop.age} />;
+    return (
+      <UserList
+        key={prop.id}
+        name={prop.name}
+        age={prop.age}
+        id={prop.id}
+        onDelete={removeUserControlHandler}
+      />
+    );
   });
 
   return (

@@ -11,10 +11,22 @@ const App = () => {
     });
   };
 
+  const removeUserHandler = (id) => {
+    setUsers((prevState) => {
+      return prevState.filter((user) => id !== user.id);
+    });
+  };
+
+  let content = null;
+
+  if (users.length > 0) {
+    content = <User values={users} onDelete={removeUserHandler} />;
+  }
+
   return (
     <Fragment>
       <NewUser exportUserInfo={exportUserHandler} />
-      <User values={users} />
+      {content}
     </Fragment>
   );
 };

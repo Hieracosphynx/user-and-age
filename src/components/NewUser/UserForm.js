@@ -92,6 +92,7 @@ const UserForm = (props) => {
             ref={enteredAge}
           />
           <Button type='submit'>Submit</Button>
+          <Button onClick={props.hideForm}>Cancel</Button>
         </form>
       </Card>
     </Wrapper>
